@@ -46,7 +46,7 @@ void ofApp::draw(){
     if(!assets.bOnline || !oscAdapter.bOnline){
         ofBackground(0);
         if(!assets.bOnline) ofDrawBitmapString("SERVER not connected", ofPoint(20, 20));
-        if(!oscAdapter.bOnline) ofDrawBitmapString("ARDUINO not connected", ofPoint(20, 20));
+        if(!oscAdapter.bOnline) ofDrawBitmapString("ARDUINO not connected", ofPoint(20, 40));
     }
 }
 
