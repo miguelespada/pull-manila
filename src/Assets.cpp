@@ -55,8 +55,8 @@ void Assets::load(){
         cout << "Loading: " << filename << endl;
     }
     
-    for(int i = 0; i < 3; i ++){
-        for(int j = 0; j < 4; j ++){
+    for(int i = 0; i < N_LANG; i ++){
+        for(int j = 0; j < N_RULES; j ++){
             string filename = assets_path + "rules/rule-" + ofToString(i) + "-" + ofToString(j) + ".png";
             rules[i][j].loadImage(filename);
             cout << "Loading: " << filename << endl;
@@ -69,16 +69,18 @@ void Assets::load(){
         cout << "Loading: " << filename << endl;
     }
     
-    for(int i = 0; i < 3; i ++){
+    for(int i = 0; i < 1; i ++){
         string filename = assets_path + "rules/rules_background-" + ofToString(i) + ".png";
         rules_background[i].loadImage(filename);
         cout << "Loading: " << filename << endl;
     }
-    
-    for(int i = 0; i < 2; i ++){
-        string filename = assets_path + "portal_animation_" + ofToString(i) + ".png";
-        portal_animations[i].loadImage(filename);
-        cout << "Loading: " << filename << endl;
+
+    if(BACKGROUND_ANIMATIONS){
+        for(int i = 0; i < 2; i ++){
+            string filename = assets_path + "portal_animation_" + ofToString(i) + ".png";
+            portal_animations[i].loadImage(filename);
+            cout << "Loading: " << filename << endl;
+        }
     }
 }
 

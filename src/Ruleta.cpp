@@ -44,7 +44,7 @@ void Ruleta::start(string name){
 void Ruleta::drawPriceIcon(priceIcon p){
     ofSetColor(255, 255, 255);
     ofPushMatrix();
-    ofTranslate(settings->width/2 - settings->icon_size/2, 0);
+    ofTranslate(settings->width/2 - settings->icon_size/2, -5);
     assetsManager->assets->price_images[p.name].draw(p.x, settings->height / 2 - settings->icon_size / 2  );
     ofPopMatrix();
     
@@ -71,14 +71,14 @@ void Ruleta::drawMasks(){
     ofSetColor(assetsManager->back_color(), 200);
     
     ofRect(0,
-           settings->height/2  - settings->icon_size/2 ,
-           settings->width/2 - settings->icon_size/2 - 5,
-           settings->icon_size );
+           settings->height/2  - settings->icon_size/2 - 10,
+           settings->width/2 - settings->icon_size/2 + 1,
+           settings->icon_size + 10);
     
-    ofRect(settings->width/2 +  settings->icon_size/2 +  6 ,
-           settings->height/2  - settings->icon_size/2,
+    ofRect(settings->width/2 +  settings->icon_size/2 +  1,
+           settings->height/2  - settings->icon_size/2 - 10,
            settings->width,
-           settings->icon_size);
+           settings->icon_size + 10);
     ofSetColor(255);
 }
 

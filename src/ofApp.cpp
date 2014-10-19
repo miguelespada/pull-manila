@@ -43,11 +43,11 @@ void ofApp::update(){
 void ofApp::draw(){
     carrousel.draw();
     
-    if(!assets.bOnline || !oscAdapter.bOnline){
-        ofBackground(0);
-        if(!assets.bOnline) ofDrawBitmapString("SERVER not connected", ofPoint(20, 20));
-        if(!oscAdapter.bOnline) ofDrawBitmapString("ARDUINO not connected", ofPoint(20, 20));
-    }
+//    if(!assets.bOnline || !oscAdapter.bOnline){
+//        ofBackground(0);
+//        if(!assets.bOnline) ofDrawBitmapString("SERVER not connected", ofPoint(20, 20));
+//        if(!oscAdapter.bOnline) ofDrawBitmapString("ARDUINO not connected", ofPoint(20, 40));
+//    }
 }
 
 

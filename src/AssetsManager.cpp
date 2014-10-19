@@ -13,7 +13,7 @@
 AssetsManager::AssetsManager(){
     ruleta_background = 0;
     language = 0;
-    rule = 3;
+    rule = N_RULES - 1;
     animation = 0;
     price_sample = 0;
     background_index = 0;
@@ -60,9 +60,9 @@ void AssetsManager::animateRules(int frequency, int pace){
     }
     
     if(ofGetFrameNum() % (frequency *  8 * pace) == 0){
-        rule = (rule + 1) % 4;
+        rule = (rule + 1) % N_RULES;
         if(rule == 0)
-            language = (language + 1) % 3;
+            language = (language + 1) % N_LANG;
     }
 }
 
@@ -71,7 +71,9 @@ void AssetsManager::drawRuletaArt(){
     ofSetColor(255);
     assets->background.draw(0, 0);
     assets->portal.draw(0, 0);
-    assets->portal_animations[ruleta_background].draw(0, 0);
+    
+    if(BACKGROUND_ANIMATIONS)
+        assets->portal_animations[ruleta_background].draw(0, 0);
     
     if(ofGetFrameNum() % 60 == 0)
         ruleta_background = (ruleta_background + 1) % 2;

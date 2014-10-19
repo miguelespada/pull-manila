@@ -14,6 +14,10 @@
 #include "ofxJSON.h"
 #include "Settings.h"
 
+#define BACKGROUND_ANIMATIONS false
+#define N_LANG 1
+#define N_RULES 3
+
 class Assets{
 public:
     

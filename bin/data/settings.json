@@ -3,12 +3,12 @@
   "speed" : 40,
   "linear_time" : 100,
   "exponential_time" : 1500,
-  "icon" : 180,
+  "icon" : 120,
   "width" : 432,
-  "height" : 768,
+  "height" : 240,
   "sleep": 1500,
-  "price_sample_x" : 200,
-  "price_sample_y" : 100,
+  "price_sample_x" : 50,
+  "price_sample_y" : 90,
   "pace" : 10,
   "background" : ["FFFDC2", "F4EA6E", "F7B228", "F48C7D", "F74F6F", "F995BA", "E3CAEF", "9DC0C9", "70F2D9", "81EAAE"]
 }

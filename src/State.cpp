@@ -103,6 +103,4 @@ void WINNER::draw(Carrousel *c){
 
 void WINNER::push(Carrousel *c)
 {
-    c->setCurrent(new IDLE());
-    delete this;
 };
