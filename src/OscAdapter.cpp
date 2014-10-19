@@ -25,6 +25,7 @@ void OscAdapter::setController(Carrousel *c){
 void OscAdapter::parseOsc(){
     // check for waiting messages
     while(receiver.hasWaitingMessages()){
+        cout << "..";
         // get the next message
         bOnline = true;
         ofxOscMessage m;
@@ -37,7 +38,7 @@ void OscAdapter::parseOsc(){
 
 void OscAdapter::update(){
     parseOsc();
-    if(ofGetFrameNum() % 300 == 0)
+    if(ofGetFrameNum() % 300 == 0 && !bOnline)
         registerOsc();
 }
 
