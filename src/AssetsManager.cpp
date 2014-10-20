@@ -35,8 +35,7 @@ ofColor AssetsManager::back_color(){
 }
 
 int AssetsManager::randomize_background(int frequency, int pace){
-    
-    if(ofGetFrameNum() % (frequency * pace) == 0){
+    if(ofGetFrameNum() % (frequency * pace) == 1){
         background_index =  int(ofRandom( assets->number_of_colors()));
     }
 };
@@ -92,6 +91,7 @@ void AssetsManager::drawPrice(string name, int x){
 }
 
 void AssetsManager::drawWinner(string name){
+    assets->portal.draw(0, 0);
     assets->price_winnings[name].draw(0, 0);
 }
 

@@ -20,8 +20,7 @@ void State::draw_background(Carrousel *c){
 
 void IDLE::draw(Carrousel *c){
     draw_background(c);
-    c->assetsManager->randomize_background(8, c->settings->pace);
-    
+    c->assetsManager->randomize_background(24, c->settings->pace);
     c->assetsManager->drawRules();
     c->assetsManager->animateRules(1, c->settings->pace);
 };
