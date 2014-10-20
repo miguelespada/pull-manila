@@ -34,10 +34,8 @@ ofColor AssetsManager::back_color(){
     return ofColor::fromHex(assets->settings->back_colors[background_index]);
 }
 
-int AssetsManager::randomize_background(int frequency, int pace){
-    if(ofGetFrameNum() % (frequency * pace) == 1){
-        background_index =  int(ofRandom( assets->number_of_colors()));
-    }
+int AssetsManager::randomize_background(){
+    background_index =  int(ofRandom( assets->number_of_colors()));
 };
 
 
@@ -60,8 +58,10 @@ void AssetsManager::animateRules(int frequency, int pace){
     
     if(ofGetFrameNum() % (frequency *  8 * pace) == 0){
         rule = (rule + 1) % N_RULES;
-        if(rule == 0)
+        if(rule == 0){
             language = (language + 1) % N_LANG;
+            randomize_background();
+        }
     }
 }
 

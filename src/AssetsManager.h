@@ -31,7 +31,7 @@ public:
     void setAssets(Assets *a);
     ofColor back_color();
     
-    int randomize_background(int frequency, int pace);
+    int randomize_background();
     string randomPrice();
     
     void drawRules();

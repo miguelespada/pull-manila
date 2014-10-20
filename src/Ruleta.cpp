@@ -44,8 +44,8 @@ void Ruleta::start(string name){
 void Ruleta::drawPriceIcon(priceIcon p){
     ofSetColor(255, 255, 255);
     ofPushMatrix();
-    ofTranslate(settings->width/2 - settings->icon_size/2, -5);
-    assetsManager->assets->price_images[p.name].draw(p.x, settings->height / 2 - settings->icon_size / 2  );
+    ofTranslate(settings->width/2 - settings->icon_size/2, -8);
+    assetsManager->assets->price_images[p.name].draw(p.x + 3, settings->height / 2 - settings->icon_size / 2  );
     ofPopMatrix();
     
     if(abs(p.x) < 45)
